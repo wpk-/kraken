@@ -1,0 +1,280 @@
+:root {
+  --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body,
+html {
+  background-color: darkgreen;
+  font-family: var(--system-ui);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.table {
+  background-color: green;
+  height: 50vh;
+  left: 25vw;
+  position: absolute;
+  top: 25vh;
+  width: 50vw;
+}
+
+.player {
+  bottom: 50vh;
+  left: 0;
+  position: absolute;
+  transform-origin: center bottom;
+  width: 100vw;
+}
+
+.player-name {
+  background-color: rgba(80, 80, 80, 0.75);
+  color: white;
+  cursor: default;
+  font-size: 3vw;
+  padding: 0 0 0.2rem;
+  text-align: center;
+
+  bottom: 0;
+  left: 34vw;
+  position: absolute;
+  width: 32vw;
+  z-index: 5;
+}
+.turn .player-name {
+  background-color: rgba(150, 150, 20, 0.85);
+}
+
+.hand {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  bottom: 0;
+  left: 16vw;
+  position: absolute;
+  transform: translate(0, 18vw);
+  width: 68vw;
+  /* 68 = (17 * 8) / 2 */
+}
+
+.player-0 .hand {
+  transform: translate(0, 10vw);
+}
+
+.player-0 {
+  transform: translate(0, 50vh);
+}
+.player-1 {
+  transform: translate(-50vw, 0) rotate(90deg);
+}
+.player-2 {
+  transform: translate(0, -50vh) rotate(180deg);
+}
+.player-3 {
+  transform: translate(50vw, 0) rotate(270deg);
+}
+
+.card {
+  background-image: url(/cards.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 25vw;
+  width: 17vw;
+}
+
+.hand .card {
+  margin: 0 -4.25vw;
+  /* 4.25 = 17 / 4 */
+  transform: translate(0, 1px);
+}
+
+.playable .card:hover {
+  cursor: pointer;
+  transform: translateY(-5vw);
+}
+
+/* Card back */
+.🂠 {
+  /* Card back source: https://djmcadam.com/wp-content/uploads/2020/06/bicycleback01.jpg */
+  background-image: url(/cards.svg#b1);
+}
+/* Spades, A23456789TJQK */
+.🂡 {
+  background-image: url(/cards.svg#sa);
+}
+.🂢 {
+  background-image: url(/cards.svg#s2);
+}
+.🂣 {
+  background-image: url(/cards.svg#s3);
+}
+.🂤 {
+  background-image: url(/cards.svg#s4);
+}
+.🂥 {
+  background-image: url(/cards.svg#s5);
+}
+.🂦 {
+  background-image: url(/cards.svg#s6);
+}
+.🂧 {
+  background-image: url(/cards.svg#s7);
+}
+.🂨 {
+  background-image: url(/cards.svg#s8);
+}
+.🂩 {
+  background-image: url(/cards.svg#s9);
+}
+.🂪 {
+  background-image: url(/cards.svg#st);
+}
+.🂫 {
+  background-image: url(/cards.svg#sj);
+}
+.🂭 {
+  background-image: url(/cards.svg#sq);
+}
+.🂮 {
+  background-image: url(/cards.svg#sk);
+}
+/* Hearts, A23456789TJQK */
+.🂱 {
+  background-image: url(/cards.svg#ha);
+}
+.🂲 {
+  background-image: url(/cards.svg#h2);
+}
+.🂳 {
+  background-image: url(/cards.svg#h3);
+}
+.🂴 {
+  background-image: url(/cards.svg#h4);
+}
+.🂵 {
+  background-image: url(/cards.svg#h5);
+}
+.🂶 {
+  background-image: url(/cards.svg#h6);
+}
+.🂷 {
+  background-image: url(/cards.svg#h7);
+}
+.🂸 {
+  background-image: url(/cards.svg#h8);
+}
+.🂹 {
+  background-image: url(/cards.svg#h9);
+}
+.🂺 {
+  background-image: url(/cards.svg#ht);
+}
+.🂻 {
+  background-image: url(/cards.svg#hj);
+}
+.🂽 {
+  background-image: url(/cards.svg#hq);
+}
+.🂾 {
+  background-image: url(/cards.svg#hk);
+}
+/* Diamonds, A23456789TJQK */
+.🃁 {
+  background-image: url(/cards.svg#da);
+}
+.🃂 {
+  background-image: url(/cards.svg#d2);
+}
+.🃃 {
+  background-image: url(/cards.svg#d3);
+}
+.🃄 {
+  background-image: url(/cards.svg#d4);
+}
+.🃅 {
+  background-image: url(/cards.svg#d5);
+}
+.🃆 {
+  background-image: url(/cards.svg#d6);
+}
+.🃇 {
+  background-image: url(/cards.svg#d7);
+}
+.🃈 {
+  background-image: url(/cards.svg#d8);
+}
+.🃉 {
+  background-image: url(/cards.svg#d9);
+}
+.🃊 {
+  background-image: url(/cards.svg#dt);
+}
+.🃋 {
+  background-image: url(/cards.svg#dj);
+}
+.🃍 {
+  background-image: url(/cards.svg#dq);
+}
+.🃎 {
+  background-image: url(/cards.svg#dk);
+}
+/* Clubs, A23456789TJQK */
+.🃑 {
+  background-image: url(/cards.svg#ca);
+}
+.🃒 {
+  background-image: url(/cards.svg#c2);
+}
+.🃓 {
+  background-image: url(/cards.svg#c3);
+}
+.🃔 {
+  background-image: url(/cards.svg#c4);
+}
+.🃕 {
+  background-image: url(/cards.svg#c5);
+}
+.🃖 {
+  background-image: url(/cards.svg#c6);
+}
+.🃗 {
+  background-image: url(/cards.svg#c7);
+}
+.🃘 {
+  background-image: url(/cards.svg#c8);
+}
+.🃙 {
+  background-image: url(/cards.svg#c9);
+}
+.🃚 {
+  background-image: url(/cards.svg#ct);
+}
+.🃛 {
+  background-image: url(/cards.svg#cj);
+}
+.🃝 {
+  background-image: url(/cards.svg#cq);
+}
+.🃞 {
+  background-image: url(/cards.svg#ck);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<style>
+.card {
+	background-image: url(svg-cards.svg);
+	background-repeat: no-repeat;
+	background-size: calc(14 * 170px) calc(5 * 250px);
+	height: 250px;
+	width: 170px;
+}
+
+.clubs     { background-position-y: calc(0 * -250px) }
+.diamonds  { background-position-y: calc(1 * -250px) }
+.hearts    { background-position-y: calc(2 * -250px) }
+.spades    { background-position-y: calc(3 * -250px) }
+
+.one       { background-position-x: calc( 0 * -170px) }
+.two       { background-position-x: calc( 1 * -170px) }
+.three     { background-position-x: calc( 2 * -170px) }
+.four      { background-position-x: calc( 3 * -170px) }
+.five      { background-position-x: calc( 4 * -170px) }
+.six       { background-position-x: calc( 5 * -170px) }
+.seven     { background-position-x: calc( 6 * -170px) }
+.eight     { background-position-x: calc( 7 * -170px) }
+.nine      { background-position-x: calc( 8 * -170px) }
+.ten       { background-position-x: calc( 9 * -170px) }
+.jack      { background-position-x: calc(10 * -170px) }
+.queen     { background-position-x: calc(11 * -170px) }
+.king      { background-position-x: calc(12 * -170px) }
+.ace       { background-position-x: calc(13 * -170px) }
+
+.back      { background-position: calc(2 * -170px) calc(4 * -250px) }
+.red.back  { background-position-x: calc(3 * -170px) }
+.joker     { background-position: calc(0 * -170px) calc(4 * -250px) }
+.red.joker { background-position-x: calc(1 * -170px) }
+</style>
+<div class="card ace of diamonds"></div>
+<div class="card back"></div>
+<img src="cards.svg#h3" height="250" width="170"/>
