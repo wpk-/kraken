@@ -27,14 +27,14 @@
  * #hck = top-half K of clubs
  * #hca = top-half A of clubs
  */
-#b { height: 249px; rx: 5; ry: 5; width: 169px; x: -84.5; y: -124.5 }
-.bb { height: 236px; rx: 4; ry: 4; width: 156px; x: -78; y: -118 }
-.pr { x: -72; y: -98 }
-.ps { x: -70; y: -69 }
-.x1 { x: -44 }
-.y1 { y: -80 }
-.y2 { y: -50 }
-.y3 { y: -25 }
+#b { height: 249px; rx: 5; ry: 5; width: 169px; x: -84.5px; y: -124.5px }
+.bb { height: 236px; rx: 4; ry: 4; width: 156px; x: -78px; y: -118px }
+.pr { x: -72px; y: -98px }
+.ps { x: -70px; y: -69px }
+.x1 { x: -44px }
+.y1 { y: -80px }
+.y2 { y: -50px }
+.y3 { y: -25px }
 
 /* Card ranks
  * ----------
@@ -112,7 +112,7 @@
  * -----------
  */
 .belt1,
-.belt2 { fill: url(#belt1); transform: rotate(-57.5deg); height: 7.25px; y: -3.625 }
+.belt2 { fill: url(#belt1); transform: rotate(-57.5deg); height: 7.25px; y: -3.625px }
 .belt2 { fill: url(#belt2) }
 
 /* Transformations

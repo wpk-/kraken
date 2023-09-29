@@ -5,7 +5,6 @@
 
 body,
 html {
-  background-color: darkgreen;
   font-family: var(--system-ui);
   height: 100%;
   margin: 0;
@@ -13,27 +12,50 @@ html {
   width: 100%;
 }
 
-body {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+/** Taller than wide. **/
+@media (max-aspect-ratio: 1) {
+  #root {
+    --card-height: 25vw;
+    --card-shift: 4.5vw;
+    --card-width: 17vw;
+    --center-x: 50vw;
+    --center-y: 50vw;
+    --table-height: 100vw;
+    --table-width: 100vw;
+  }
+}
+/** Wider than tall. **/
+@media (min-aspect-ratio: 1) {
+  #root {
+    --card-height: 25vh;
+    --card-shift: 4.5vh;
+    --card-width: 17vh;
+    --center-x: 50vh;
+    --center-y: 50vh;
+    --table-height: 100vh;
+    --table-width: 100vh;
+  }
 }
 
 #root {
-  height: 100vh;
+  background-color: darkgreen;
+  height: var(--table-height);
   overflow: hidden;
   position: relative;
-  width: 100vw;
+  width: var(--table-width);
+
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
-.table {
-  background-color: green;
-  height: 50vh;
-  left: 25vw;
+.card {
   position: absolute;
-  top: 25vh;
-  width: 50vw;
+  transform: translate(0, 1px);
+}
+.h1-1 {
+  transform: translate(calc(-1 * var(--card-shift)), var(--center-y));
 }
 
 .player {
@@ -62,55 +84,18 @@ body {
   background-color: rgba(150, 150, 20, 0.85);
 }
 
-.hand {
-  align-items: flex-start;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-
-  bottom: 0;
-  left: 16vw;
-  position: absolute;
-  transform: translate(0, 18vw);
-  width: 68vw;
-  /* 68 = (17 * 8) / 2 */
-}
-
-.player-0 .hand {
-  transform: translate(0, 10vw);
-}
-
-.player-0 {
-  transform: translate(0, 50vh);
-}
-.player-1 {
-  transform: translate(-50vw, 0) rotate(90deg);
-}
-.player-2 {
-  transform: translate(0, -50vh) rotate(180deg);
-}
-.player-3 {
-  transform: translate(50vw, 0) rotate(270deg);
-}
-
 .card {
   background-image: url(/cards.svg);
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
-  height: 25vw;
-  width: 17vw;
+  height: var(--card-height);
+  width: var(--card-width);
 }
 
 .hand .card {
   margin: 0 -4.25vw;
   /* 4.25 = 17 / 4 */
-  transform: translate(0, 1px);
-}
-
-.playable .card:hover {
-  cursor: pointer;
-  transform: translateY(-5vw);
 }
 
 /* Card back */

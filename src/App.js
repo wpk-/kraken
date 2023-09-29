@@ -82,19 +82,19 @@ import { deal, back } from './js/cards.js';
 // const connect = () => connectSB(keys.socketsBay, 1)
 
 export default function App() {
-  const match = {
-    players: ['wpk', 'left', 'mate', 'right'],
-  };
-  const round = {
-    dealer: 1,
-    declarer: 2,
-    hands: deal(),
-  };
-  const trick = {
-    leader: 1,
-    inturn: 3,
-    cards: [hands[1][1], hands[2][2]],
-  };
+  // const match = {
+  //   players: ['wpk', 'left', 'mate', 'right'],
+  // };
+  // const round = {
+  //   dealer: 1,
+  //   declarer: 2,
+  //   hands: deal(),
+  // };
+  // const trick = {
+  //   leader: 1,
+  //   inturn: 3,
+  //   cards: [hands[1][1], hands[2][2]],
+  // };
 
   /*
   1 match = 16 rounds
@@ -113,7 +113,9 @@ export default function App() {
 
   return (
     <>
-      <Table cards={trick} />
+      <Card card="🂠" className="" />
+      <Card card="🂥" className="h1-1" />
+      {/* <Table cards={trick} />
       {hands.slice(1).map((hand, i) => (
         <Player
           key={i + 1}
@@ -133,7 +135,7 @@ export default function App() {
         showCards={true}
         canPlay={true}
         turn={turn === 0}
-      />
+      /> */}
     </>
   );
   // After the table: action buttons.
@@ -176,8 +178,14 @@ function Hand({ cards, open = false, playable = false }) {
   );
 }
 
-function Card({ card }) {
-  return <div className={`card ${card}`} aria-label={card}></div>;
+function Card({ card, className = '', ...props }) {
+  return (
+    <div
+      className={`card ${card} ${className}`}
+      aria-label={card}
+      {...props}
+    ></div>
+  );
 }
 
 /**
