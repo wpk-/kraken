@@ -27,10 +27,10 @@
  * #hck = top-half K of clubs
  * #hca = top-half A of clubs
  */
-#b { height: 249px; rx: 5; ry: 5; width: 169px; x: -84.5px; y: -124.5px }
-.bb { height: 236px; rx: 4; ry: 4; width: 156px; x: -78px; y: -118px }
-.pr { x: -72px; y: -98px }
-.ps { x: -70px; y: -69px }
+#b { height: 249px; width: 169px; x: -84.5px; y: -124.5px }
+.bb { height: 236px; width: 156px; x: -78px; y: -118px }
+.pr { transform: translate(-72px, -98px) }
+.ps { transform: translate(-70px, -69px) }
 .x1 { x: -44px }
 .y1 { y: -80px }
 .y2 { y: -50px }
@@ -128,7 +128,7 @@
 ]]></style>
 <defs>
 	<!-- Card base -->
-	<rect class="fw lk" id="b"/>
+	<rect class="fw lk" id="b" ry="2%"/>
 	<!-- Ranks 1, 2, 3, ... Q, K, A -->
 	<text class="rank" id="r1">1</text>
 	<text class="rank" id="r2">2</text>
@@ -259,7 +259,7 @@
 	<g id="j1"><g id="hj1"><use href="#rjo" class="pr fk"/></g><use href="#hj1" class="tb"/><use href="#joker"/></g>
 	<g id="j2"><g id="hj2"><use href="#rjo" class="pr fr"/></g><use href="#hj2" class="tb"/><use href="#joker"/></g>
 	<!-- Card back -->
-	<g id="b1"><rect class="bb fa1"/><use href="#classic"/></g>
-	<g id="b2"><rect class="bb fa2"/><use href="#classic"/></g>
+	<g id="b1"><rect class="bb fa1" ry="2%"/><use href="#classic"/></g>
+	<g id="b2"><rect class="bb fa2" ry="2%"/><use href="#classic"/></g>
 </g>
 </svg>
